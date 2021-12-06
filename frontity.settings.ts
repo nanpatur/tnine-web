@@ -1,5 +1,9 @@
-const settings = {
-  "name": "my-first-frontity-project",
+import { Settings } from "frontity/types";
+import WpSource from "@frontity/wp-source/types";
+import Theme from "@frontity/mars-theme-typescript/types";
+
+const settings: Settings<Theme | WpSource> = {
+  "name": "frontity-web",
   "state": {
     "frontity": {
       "url": "https://tnineprojectcontent.wordpress.com/",
@@ -9,7 +13,7 @@ const settings = {
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "@frontity/mars-theme-typescript",
       "state": {
         "theme": {
           "menu": [
